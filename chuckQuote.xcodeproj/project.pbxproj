@@ -10,20 +10,76 @@
 		F9FF5B912ACFF6E200A2AC3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5B902ACFF6E200A2AC3D /* AppDelegate.swift */; };
 		F9FF5B932ACFF6E200A2AC3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5B922ACFF6E200A2AC3D /* SceneDelegate.swift */; };
 		F9FF5B952ACFF6E200A2AC3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5B942ACFF6E200A2AC3D /* ViewController.swift */; };
-		F9FF5B982ACFF6E200A2AC3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FF5B962ACFF6E200A2AC3D /* Main.storyboard */; };
 		F9FF5B9A2ACFF6E300A2AC3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FF5B992ACFF6E300A2AC3D /* Assets.xcassets */; };
-		F9FF5B9D2ACFF6E300A2AC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FF5B9B2ACFF6E300A2AC3D /* LaunchScreen.storyboard */; };
+		F9FF5BA62AD0171B00A2AC3D /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BA52AD0171A00A2AC3D /* Coordinatable.swift */; };
+		F9FF5BA82AD0176600A2AC3D /* ModuleCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BA72AD0176600A2AC3D /* ModuleCoordinatable.swift */; };
+		F9FF5BAB2AD0179700A2AC3D /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BAA2AD0179700A2AC3D /* Module.swift */; };
+		F9FF5BAD2AD019EC00A2AC3D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BAC2AD019EC00A2AC3D /* ViewModelProtocol.swift */; };
+		F9FF5BB02AD4432500A2AC3D /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BAF2AD4432500A2AC3D /* AppFactory.swift */; };
+		F9FF5BB22AD444F700A2AC3D /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BB12AD444F700A2AC3D /* TabCoordinator.swift */; };
+		F9FF5BB42AD4456600A2AC3D /* RandomQuoteTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BB32AD4456600A2AC3D /* RandomQuoteTabCoordinator.swift */; };
+		F9FF5BB62AD4457C00A2AC3D /* QuotesListTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BB52AD4457C00A2AC3D /* QuotesListTabCoordinator.swift */; };
+		F9FF5BB82AD4459F00A2AC3D /* CategorizedQuotesTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BB72AD4459F00A2AC3D /* CategorizedQuotesTabCoordinator.swift */; };
+		F9FF5BBC2AD4466600A2AC3D /* RandomQuoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BBB2AD4466600A2AC3D /* RandomQuoteCoordinator.swift */; };
+		F9FF5BBE2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BBD2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift */; };
+		F9FF5BC02AD4469800A2AC3D /* QuotesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BBF2AD4469800A2AC3D /* QuotesListCoordinator.swift */; };
+		F9FF5BCA2AD447FA00A2AC3D /* CategorizedQuotesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BC92AD447FA00A2AC3D /* CategorizedQuotesViewModelProtocol.swift */; };
+		F9FF5BCC2AD4480B00A2AC3D /* CategorizedQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BCB2AD4480B00A2AC3D /* CategorizedQuotesViewModel.swift */; };
+		F9FF5BCE2AD4482700A2AC3D /* QuotesListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BCD2AD4482700A2AC3D /* QuotesListViewModelProtocol.swift */; };
+		F9FF5BD02AD4483E00A2AC3D /* QuotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BCF2AD4483E00A2AC3D /* QuotesListViewModel.swift */; };
+		F9FF5BD22AD4485100A2AC3D /* RandomQuoteViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BD12AD4485100A2AC3D /* RandomQuoteViewModelProtocol.swift */; };
+		F9FF5BD42AD4485F00A2AC3D /* RandomQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BD32AD4485F00A2AC3D /* RandomQuoteViewModel.swift */; };
+		F9FF5BD72AD44CC200A2AC3D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BD62AD44CC200A2AC3D /* TabBarController.swift */; };
+		F9FF5BD92AD44CDC00A2AC3D /* RandomQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BD82AD44CDC00A2AC3D /* RandomQuoteViewController.swift */; };
+		F9FF5BDB2AD44CFC00A2AC3D /* QuotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BDA2AD44CFC00A2AC3D /* QuotesListViewController.swift */; };
+		F9FF5BDD2AD44D1000A2AC3D /* CategorizedQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BDC2AD44D1000A2AC3D /* CategorizedQuotesViewController.swift */; };
+		F9FF5BE22AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BE12AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift */; };
+		F9FF5BE82AD5BDB200A2AC3D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BE72AD5BDB200A2AC3D /* NetworkService.swift */; };
+		F9FF5BEB2AD5C20300A2AC3D /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BEA2AD5C20300A2AC3D /* NetUtils.swift */; };
+		F9FF5BEE2AD5C27E00A2AC3D /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */; };
+		F9FF5BF02AD5C30C00A2AC3D /* QuoteRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */; };
+		F9FF5BF42AD5C44200A2AC3D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F9FF5BF32AD5C44200A2AC3D /* Realm */; };
+		F9FF5BF62AD5C44200A2AC3D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9FF5BF52AD5C44200A2AC3D /* RealmSwift */; };
+		F9FF5BF82AD5E2A900A2AC3D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BF72AD5E2A900A2AC3D /* RealmService.swift */; };
+		F9FF5BFC2AD87F4700A2AC3D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BFB2AD87F4700A2AC3D /* Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9FF5B8D2ACFF6E200A2AC3D /* chuckQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chuckQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9FF5B8D2ACFF6E200A2AC3D /* Chuck Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FF5B902ACFF6E200A2AC3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9FF5B922ACFF6E200A2AC3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F9FF5B942ACFF6E200A2AC3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9FF5B972ACFF6E200A2AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9FF5B992ACFF6E300A2AC3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F9FF5B9C2ACFF6E300A2AC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9FF5B9E2ACFF6E300A2AC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FF5BA52AD0171A00A2AC3D /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		F9FF5BA72AD0176600A2AC3D /* ModuleCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCoordinatable.swift; sourceTree = "<group>"; };
+		F9FF5BAA2AD0179700A2AC3D /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		F9FF5BAC2AD019EC00A2AC3D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		F9FF5BAF2AD4432500A2AC3D /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		F9FF5BB12AD444F700A2AC3D /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BB32AD4456600A2AC3D /* RandomQuoteTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteTabCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BB52AD4457C00A2AC3D /* QuotesListTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListTabCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BB72AD4459F00A2AC3D /* CategorizedQuotesTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedQuotesTabCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BBB2AD4466600A2AC3D /* RandomQuoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BBD2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedQuotesCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BBF2AD4469800A2AC3D /* QuotesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListCoordinator.swift; sourceTree = "<group>"; };
+		F9FF5BC92AD447FA00A2AC3D /* CategorizedQuotesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedQuotesViewModelProtocol.swift; sourceTree = "<group>"; };
+		F9FF5BCB2AD4480B00A2AC3D /* CategorizedQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedQuotesViewModel.swift; sourceTree = "<group>"; };
+		F9FF5BCD2AD4482700A2AC3D /* QuotesListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListViewModelProtocol.swift; sourceTree = "<group>"; };
+		F9FF5BCF2AD4483E00A2AC3D /* QuotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListViewModel.swift; sourceTree = "<group>"; };
+		F9FF5BD12AD4485100A2AC3D /* RandomQuoteViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewModelProtocol.swift; sourceTree = "<group>"; };
+		F9FF5BD32AD4485F00A2AC3D /* RandomQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewModel.swift; sourceTree = "<group>"; };
+		F9FF5BD62AD44CC200A2AC3D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F9FF5BD82AD44CDC00A2AC3D /* RandomQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewController.swift; sourceTree = "<group>"; };
+		F9FF5BDA2AD44CFC00A2AC3D /* QuotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListViewController.swift; sourceTree = "<group>"; };
+		F9FF5BDC2AD44D1000A2AC3D /* CategorizedQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedQuotesViewController.swift; sourceTree = "<group>"; };
+		F9FF5BE12AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveChildCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		F9FF5BE72AD5BDB200A2AC3D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F9FF5BEA2AD5C20300A2AC3D /* NetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetUtils.swift; sourceTree = "<group>"; };
+		F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRealmModel.swift; sourceTree = "<group>"; };
+		F9FF5BF72AD5E2A900A2AC3D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		F9FF5BFB2AD87F4700A2AC3D /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FF5BF62AD5C44200A2AC3D /* RealmSwift in Frameworks */,
+				F9FF5BF42AD5C44200A2AC3D /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +106,7 @@
 		F9FF5B8E2ACFF6E200A2AC3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9FF5B8D2ACFF6E200A2AC3D /* chuckQuote.app */,
+				F9FF5B8D2ACFF6E200A2AC3D /* Chuck Quotes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +114,138 @@
 		F9FF5B8F2ACFF6E200A2AC3D /* chuckQuote */ = {
 			isa = PBXGroup;
 			children = (
+				F9FF5BFA2AD87F3400A2AC3D /* Enums */,
+				F9FF5BEC2AD5C26F00A2AC3D /* Models */,
+				F9FF5BE92AD5C1F300A2AC3D /* Utils */,
+				F9FF5BE32AD5BD0D00A2AC3D /* Services */,
+				F9FF5BE02AD450B000A2AC3D /* Delegates */,
+				F9FF5BD52AD44C9900A2AC3D /* ViewControllers */,
+				F9FF5BAE2AD4431200A2AC3D /* Factory */,
+				F9FF5BA92AD0178700A2AC3D /* Modules */,
+				F9FF5BA42AD0170300A2AC3D /* Coordinators */,
 				F9FF5B902ACFF6E200A2AC3D /* AppDelegate.swift */,
 				F9FF5B922ACFF6E200A2AC3D /* SceneDelegate.swift */,
 				F9FF5B942ACFF6E200A2AC3D /* ViewController.swift */,
-				F9FF5B962ACFF6E200A2AC3D /* Main.storyboard */,
 				F9FF5B992ACFF6E300A2AC3D /* Assets.xcassets */,
-				F9FF5B9B2ACFF6E300A2AC3D /* LaunchScreen.storyboard */,
 				F9FF5B9E2ACFF6E300A2AC3D /* Info.plist */,
 			);
 			path = chuckQuote;
+			sourceTree = "<group>";
+		};
+		F9FF5BA42AD0170300A2AC3D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BA52AD0171A00A2AC3D /* Coordinatable.swift */,
+				F9FF5BA72AD0176600A2AC3D /* ModuleCoordinatable.swift */,
+				F9FF5BB12AD444F700A2AC3D /* TabCoordinator.swift */,
+				F9FF5BB32AD4456600A2AC3D /* RandomQuoteTabCoordinator.swift */,
+				F9FF5BBB2AD4466600A2AC3D /* RandomQuoteCoordinator.swift */,
+				F9FF5BB52AD4457C00A2AC3D /* QuotesListTabCoordinator.swift */,
+				F9FF5BBF2AD4469800A2AC3D /* QuotesListCoordinator.swift */,
+				F9FF5BB72AD4459F00A2AC3D /* CategorizedQuotesTabCoordinator.swift */,
+				F9FF5BBD2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F9FF5BA92AD0178700A2AC3D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BC32AD4479300A2AC3D /* Categorized quotes */,
+				F9FF5BC22AD4478A00A2AC3D /* Quotes list */,
+				F9FF5BC12AD4477400A2AC3D /* Random quote */,
+				F9FF5BAA2AD0179700A2AC3D /* Module.swift */,
+				F9FF5BAC2AD019EC00A2AC3D /* ViewModelProtocol.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F9FF5BAE2AD4431200A2AC3D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BAF2AD4432500A2AC3D /* AppFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		F9FF5BC12AD4477400A2AC3D /* Random quote */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BD12AD4485100A2AC3D /* RandomQuoteViewModelProtocol.swift */,
+				F9FF5BD32AD4485F00A2AC3D /* RandomQuoteViewModel.swift */,
+			);
+			path = "Random quote";
+			sourceTree = "<group>";
+		};
+		F9FF5BC22AD4478A00A2AC3D /* Quotes list */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BCD2AD4482700A2AC3D /* QuotesListViewModelProtocol.swift */,
+				F9FF5BCF2AD4483E00A2AC3D /* QuotesListViewModel.swift */,
+			);
+			path = "Quotes list";
+			sourceTree = "<group>";
+		};
+		F9FF5BC32AD4479300A2AC3D /* Categorized quotes */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BC92AD447FA00A2AC3D /* CategorizedQuotesViewModelProtocol.swift */,
+				F9FF5BCB2AD4480B00A2AC3D /* CategorizedQuotesViewModel.swift */,
+			);
+			path = "Categorized quotes";
+			sourceTree = "<group>";
+		};
+		F9FF5BD52AD44C9900A2AC3D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BD62AD44CC200A2AC3D /* TabBarController.swift */,
+				F9FF5BD82AD44CDC00A2AC3D /* RandomQuoteViewController.swift */,
+				F9FF5BDA2AD44CFC00A2AC3D /* QuotesListViewController.swift */,
+				F9FF5BDC2AD44D1000A2AC3D /* CategorizedQuotesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F9FF5BE02AD450B000A2AC3D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BE12AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F9FF5BE32AD5BD0D00A2AC3D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BE72AD5BDB200A2AC3D /* NetworkService.swift */,
+				F9FF5BF72AD5E2A900A2AC3D /* RealmService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F9FF5BE92AD5C1F300A2AC3D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BEA2AD5C20300A2AC3D /* NetUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F9FF5BEC2AD5C26F00A2AC3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */,
+				F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F9FF5BFA2AD87F3400A2AC3D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F9FF5BFB2AD87F4700A2AC3D /* Categories.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,8 +264,12 @@
 			dependencies = (
 			);
 			name = chuckQuote;
+			packageProductDependencies = (
+				F9FF5BF32AD5C44200A2AC3D /* Realm */,
+				F9FF5BF52AD5C44200A2AC3D /* RealmSwift */,
+			);
 			productName = chuckQuote;
-			productReference = F9FF5B8D2ACFF6E200A2AC3D /* chuckQuote.app */;
+			productReference = F9FF5B8D2ACFF6E200A2AC3D /* Chuck Quotes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,6 +296,9 @@
 				Base,
 			);
 			mainGroup = F9FF5B842ACFF6E100A2AC3D;
+			packageReferences = (
+				F9FF5BF22AD5C44200A2AC3D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = F9FF5B8E2ACFF6E200A2AC3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9FF5B9D2ACFF6E300A2AC3D /* LaunchScreen.storyboard in Resources */,
 				F9FF5B9A2ACFF6E300A2AC3D /* Assets.xcassets in Resources */,
-				F9FF5B982ACFF6E200A2AC3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +324,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FF5BCE2AD4482700A2AC3D /* QuotesListViewModelProtocol.swift in Sources */,
+				F9FF5BDD2AD44D1000A2AC3D /* CategorizedQuotesViewController.swift in Sources */,
 				F9FF5B952ACFF6E200A2AC3D /* ViewController.swift in Sources */,
+				F9FF5BB82AD4459F00A2AC3D /* CategorizedQuotesTabCoordinator.swift in Sources */,
+				F9FF5BBC2AD4466600A2AC3D /* RandomQuoteCoordinator.swift in Sources */,
+				F9FF5BFC2AD87F4700A2AC3D /* Categories.swift in Sources */,
+				F9FF5BB22AD444F700A2AC3D /* TabCoordinator.swift in Sources */,
+				F9FF5BF02AD5C30C00A2AC3D /* QuoteRealmModel.swift in Sources */,
+				F9FF5BBE2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift in Sources */,
+				F9FF5BEB2AD5C20300A2AC3D /* NetUtils.swift in Sources */,
+				F9FF5BF82AD5E2A900A2AC3D /* RealmService.swift in Sources */,
+				F9FF5BA62AD0171B00A2AC3D /* Coordinatable.swift in Sources */,
+				F9FF5BCC2AD4480B00A2AC3D /* CategorizedQuotesViewModel.swift in Sources */,
 				F9FF5B912ACFF6E200A2AC3D /* AppDelegate.swift in Sources */,
+				F9FF5BE82AD5BDB200A2AC3D /* NetworkService.swift in Sources */,
+				F9FF5BC02AD4469800A2AC3D /* QuotesListCoordinator.swift in Sources */,
+				F9FF5BA82AD0176600A2AC3D /* ModuleCoordinatable.swift in Sources */,
+				F9FF5BB62AD4457C00A2AC3D /* QuotesListTabCoordinator.swift in Sources */,
+				F9FF5BB02AD4432500A2AC3D /* AppFactory.swift in Sources */,
+				F9FF5BB42AD4456600A2AC3D /* RandomQuoteTabCoordinator.swift in Sources */,
+				F9FF5BCA2AD447FA00A2AC3D /* CategorizedQuotesViewModelProtocol.swift in Sources */,
+				F9FF5BDB2AD44CFC00A2AC3D /* QuotesListViewController.swift in Sources */,
+				F9FF5BD22AD4485100A2AC3D /* RandomQuoteViewModelProtocol.swift in Sources */,
+				F9FF5BD42AD4485F00A2AC3D /* RandomQuoteViewModel.swift in Sources */,
+				F9FF5BD02AD4483E00A2AC3D /* QuotesListViewModel.swift in Sources */,
+				F9FF5BD72AD44CC200A2AC3D /* TabBarController.swift in Sources */,
+				F9FF5BAD2AD019EC00A2AC3D /* ViewModelProtocol.swift in Sources */,
+				F9FF5BE22AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift in Sources */,
 				F9FF5B932ACFF6E200A2AC3D /* SceneDelegate.swift in Sources */,
+				F9FF5BEE2AD5C27E00A2AC3D /* QuoteModel.swift in Sources */,
+				F9FF5BD92AD44CDC00A2AC3D /* RandomQuoteViewController.swift in Sources */,
+				F9FF5BAB2AD0179700A2AC3D /* Module.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F9FF5B962ACFF6E200A2AC3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9FF5B972ACFF6E200A2AC3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F9FF5B9B2ACFF6E300A2AC3D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9FF5B9C2ACFF6E300A2AC3D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F9FF5B9F2ACFF6E300A2AC3D /* Debug */ = {
@@ -295,9 +491,9 @@
 				DEVELOPMENT_TEAM = ZYCY24J2LU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chuckQuote/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chuck Quotes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +502,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yoji-kms.chuckQuote";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chuck Quotes";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,9 +519,9 @@
 				DEVELOPMENT_TEAM = ZYCY24J2LU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chuckQuote/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chuck Quotes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +530,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yoji-kms.chuckQuote";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chuck Quotes";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,6 +559,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9FF5BF22AD5C44200A2AC3D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9FF5BF32AD5C44200A2AC3D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9FF5BF22AD5C44200A2AC3D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F9FF5BF52AD5C44200A2AC3D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9FF5BF22AD5C44200A2AC3D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9FF5B852ACFF6E100A2AC3D /* Project object */;
 }
