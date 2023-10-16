@@ -30,7 +30,7 @@ final class CategorizedQuotesCoordinator: ModuleCoordinatable {
         return viewController
     }
     
-    func pushQuotesListController(category: String) {
+    func pushQuotesListController(category: Category) {
         let quotesListCoordinator = QuotesListCoordinator(moduleType: .quotesList(category), factory: self.factory)
         self.addChildCoordinator(quotesListCoordinator)
         guard let viewControllerToPush = quotesListCoordinator.start() as? QuotesListViewController else {

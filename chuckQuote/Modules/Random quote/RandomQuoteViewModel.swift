@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class RandomQuoteViewModel: RandomQuoteViewModelProtocol {
     var coordinator: RandomQuoteCoordinator?
@@ -19,24 +20,23 @@ final class RandomQuoteViewModel: RandomQuoteViewModelProtocol {
         self.realmService = realmService
     }
     
-    func updateStateNet(task: NetworkHandle) async -> QuoteModel? {
+    func updateStateNet(task: NetworkHandle) async -> Quote? {
         switch task {
         case .generateQuoteBtnDidTap:
-            guard let quote = await NetworkService.request() as? QuoteModel else {
-                return QuoteModel()
+            guard let netQuote = await NetworkService.request() as? QuoteNetModel else {
+                return Quote()
             }
+            let categories = netQuote.categories.map { CategoryRealmModel($0) }
             
-            let realmQuote = QuoteRealmModel(value: quote.keyedValues)
-            self.realmService.getAll(model: QuoteRealmModel.self) { result in
-                switch result {
-                case .success(let realmQuotes):
-                    if (!realmQuotes.contains(where: { $0.value == realmQuote.value })) {
-                        self.realmService.add(object: realmQuote) {_ in }
-                    }
-                case .failure(let error):
-                    print("🔴\(error)")
-                }
-            }
+            let realmQuote = QuoteRealmModel(
+                categories: categories,
+                createdAt: netQuote.createdAt,
+                value: netQuote.value,
+                realmService: self.realmService)
+            
+            self.realmService.add(object: realmQuote, keyValue: realmQuote.value) {_ in}
+            
+            let quote = Quote(realmModel: realmQuote)
             
             return quote
         }

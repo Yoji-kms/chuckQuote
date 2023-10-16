@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RandomQuoteViewModelProtocol: ViewModelProtocol {
-    func updateStateNet(task: RandomQuoteViewModel.NetworkHandle) async -> QuoteModel?
+    func updateStateNet(task: RandomQuoteViewModel.NetworkHandle) async -> Quote?
 }

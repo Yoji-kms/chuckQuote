@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CategorizedQuotesViewModelProtocol: ViewModelProtocol {
-    var data: [String] { get }
+    var data: [Category] { get }
     func updateState(viewInput: CategorizedQuotesViewModel.ViewInput)
     func refreshData()
 }

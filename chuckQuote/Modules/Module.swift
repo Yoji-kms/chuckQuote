@@ -16,7 +16,7 @@ struct Module {
     
     enum ModuleType {
         case randomQuote
-        case quotesList(_ category: String = Categories.all.rawValue)
+        case quotesList(_ category: Category? = nil)
         case categorizedQuotes
     }
     

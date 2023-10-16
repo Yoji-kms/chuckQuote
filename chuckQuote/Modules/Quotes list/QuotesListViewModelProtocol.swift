@@ -8,6 +8,6 @@
 import Foundation
 
 protocol QuotesListViewModelProtocol: ViewModelProtocol {
-    var data: [QuoteModel] { get }
+    var data: [Quote] { get }
     func refreshData()
 }

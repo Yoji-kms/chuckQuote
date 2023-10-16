@@ -10,7 +10,7 @@ import Foundation
 final class NetworkService {
     static func request() async -> Any? {
         let url = "https://api.chucknorris.io/jokes/random"
-        let quote: QuoteModel? = await url.handleAsDecodable()
+        let quote: QuoteNetModel? = await url.handleAsDecodable()
         return quote
     }
 }

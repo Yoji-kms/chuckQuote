@@ -8,6 +8,5 @@
 import Foundation
 
 enum Categories: String {
-    case all = "all"
     case uncategorized = "uncategorized"
 }

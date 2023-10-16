@@ -36,12 +36,15 @@
 		F9FF5BE22AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BE12AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift */; };
 		F9FF5BE82AD5BDB200A2AC3D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BE72AD5BDB200A2AC3D /* NetworkService.swift */; };
 		F9FF5BEB2AD5C20300A2AC3D /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BEA2AD5C20300A2AC3D /* NetUtils.swift */; };
-		F9FF5BEE2AD5C27E00A2AC3D /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */; };
+		F9FF5BEE2AD5C27E00A2AC3D /* QuoteNetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BED2AD5C27E00A2AC3D /* QuoteNetModel.swift */; };
 		F9FF5BF02AD5C30C00A2AC3D /* QuoteRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */; };
 		F9FF5BF42AD5C44200A2AC3D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F9FF5BF32AD5C44200A2AC3D /* Realm */; };
 		F9FF5BF62AD5C44200A2AC3D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9FF5BF52AD5C44200A2AC3D /* RealmSwift */; };
 		F9FF5BF82AD5E2A900A2AC3D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BF72AD5E2A900A2AC3D /* RealmService.swift */; };
 		F9FF5BFC2AD87F4700A2AC3D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BFB2AD87F4700A2AC3D /* Categories.swift */; };
+		F9FF5BFE2AD8906400A2AC3D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BFD2AD8906400A2AC3D /* Category.swift */; };
+		F9FF5C002AD8907600A2AC3D /* CategoryRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5BFF2AD8907600A2AC3D /* CategoryRealmModel.swift */; };
+		F9FF5C022AD94E7D00A2AC3D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF5C012AD94E7D00A2AC3D /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,10 +79,13 @@
 		F9FF5BE12AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveChildCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F9FF5BE72AD5BDB200A2AC3D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F9FF5BEA2AD5C20300A2AC3D /* NetUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetUtils.swift; sourceTree = "<group>"; };
-		F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		F9FF5BED2AD5C27E00A2AC3D /* QuoteNetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteNetModel.swift; sourceTree = "<group>"; };
 		F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRealmModel.swift; sourceTree = "<group>"; };
 		F9FF5BF72AD5E2A900A2AC3D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		F9FF5BFB2AD87F4700A2AC3D /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		F9FF5BFD2AD8906400A2AC3D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F9FF5BFF2AD8907600A2AC3D /* CategoryRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRealmModel.swift; sourceTree = "<group>"; };
+		F9FF5C012AD94E7D00A2AC3D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +240,11 @@
 		F9FF5BEC2AD5C26F00A2AC3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F9FF5BED2AD5C27E00A2AC3D /* QuoteModel.swift */,
+				F9FF5BED2AD5C27E00A2AC3D /* QuoteNetModel.swift */,
 				F9FF5BEF2AD5C30C00A2AC3D /* QuoteRealmModel.swift */,
+				F9FF5C012AD94E7D00A2AC3D /* Quote.swift */,
+				F9FF5BFF2AD8907600A2AC3D /* CategoryRealmModel.swift */,
+				F9FF5BFD2AD8906400A2AC3D /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				F9FF5BBC2AD4466600A2AC3D /* RandomQuoteCoordinator.swift in Sources */,
 				F9FF5BFC2AD87F4700A2AC3D /* Categories.swift in Sources */,
 				F9FF5BB22AD444F700A2AC3D /* TabCoordinator.swift in Sources */,
+				F9FF5BFE2AD8906400A2AC3D /* Category.swift in Sources */,
 				F9FF5BF02AD5C30C00A2AC3D /* QuoteRealmModel.swift in Sources */,
 				F9FF5BBE2AD4468400A2AC3D /* CategorizedQuotesCoordinator.swift in Sources */,
 				F9FF5BEB2AD5C20300A2AC3D /* NetUtils.swift in Sources */,
@@ -340,6 +350,7 @@
 				F9FF5B912ACFF6E200A2AC3D /* AppDelegate.swift in Sources */,
 				F9FF5BE82AD5BDB200A2AC3D /* NetworkService.swift in Sources */,
 				F9FF5BC02AD4469800A2AC3D /* QuotesListCoordinator.swift in Sources */,
+				F9FF5C002AD8907600A2AC3D /* CategoryRealmModel.swift in Sources */,
 				F9FF5BA82AD0176600A2AC3D /* ModuleCoordinatable.swift in Sources */,
 				F9FF5BB62AD4457C00A2AC3D /* QuotesListTabCoordinator.swift in Sources */,
 				F9FF5BB02AD4432500A2AC3D /* AppFactory.swift in Sources */,
@@ -353,8 +364,9 @@
 				F9FF5BAD2AD019EC00A2AC3D /* ViewModelProtocol.swift in Sources */,
 				F9FF5BE22AD450CA00A2AC3D /* RemoveChildCoordinatorDelegate.swift in Sources */,
 				F9FF5B932ACFF6E200A2AC3D /* SceneDelegate.swift in Sources */,
-				F9FF5BEE2AD5C27E00A2AC3D /* QuoteModel.swift in Sources */,
+				F9FF5BEE2AD5C27E00A2AC3D /* QuoteNetModel.swift in Sources */,
 				F9FF5BD92AD44CDC00A2AC3D /* RandomQuoteViewController.swift in Sources */,
+				F9FF5C022AD94E7D00A2AC3D /* Quote.swift in Sources */,
 				F9FF5BAB2AD0179700A2AC3D /* Module.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

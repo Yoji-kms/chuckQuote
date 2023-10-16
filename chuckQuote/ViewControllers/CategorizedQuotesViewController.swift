@@ -74,7 +74,7 @@ extension CategorizedQuotesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
         let category = self.viewModel.data[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = category
+        content.text = category.value
         cell.contentConfiguration = content
         cell.accessoryType = .disclosureIndicator
         return cell

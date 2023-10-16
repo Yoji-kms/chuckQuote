@@ -22,8 +22,27 @@ final class RealmService {
         }
     }
     
-    func add<T: Object> (object: T, completion: @escaping (Result<Void, Error>) -> Void) {
-        self.handle(object: object, action: .add, completion: completion)
+    func getObjectByKeyValue<T: Object> (
+        model: T.Type,
+        keyValue: String,
+        completion: @escaping (Result<T?, Error>) -> Void
+    ){
+        do {
+            let realm = try Realm()
+            
+            guard let object = realm.object(ofType: model.self, forPrimaryKey: keyValue) else {
+                completion(.success(nil))
+                return
+            }
+            
+            completion(.success(object))
+        } catch {
+            completion(.failure(NSError()))
+        }
+    }
+    
+    func add<T: Object> (object: T, keyValue: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        self.handle(object: object, action: .add(keyValue), completion: completion)
     }
     
     func delete<T: Object> (object: T, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -31,7 +50,7 @@ final class RealmService {
     }
     
     enum Action {
-        case add
+        case add(String)
         case delete
     }
     
@@ -41,8 +60,10 @@ final class RealmService {
             
             try realm.write {
                 switch action {
-                case .add:
-                    realm.add(object)
+                case .add(let keyValue):
+                    if (!object.isExisted(keyValue: keyValue, realm: realm)) {
+                        realm.add(object)
+                    }
                 case .delete:
                     realm.delete(object)
                 }
@@ -53,5 +74,18 @@ final class RealmService {
             completion(.failure(NSError()))
         }
     }
+    
+    private func checkExistance<T: Object>(model: T.Type) {
+        
+    }
 }
 
+extension Object {
+    func isExisted(keyValue: String, realm: Realm) -> Bool {
+        if let object = realm.object(ofType: Self.self, forPrimaryKey: keyValue) {
+            return true
+        }
+
+        return false
+    }
+}

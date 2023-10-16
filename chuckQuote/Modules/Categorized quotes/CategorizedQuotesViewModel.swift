@@ -9,11 +9,11 @@ import Foundation
 
 final class CategorizedQuotesViewModel: CategorizedQuotesViewModelProtocol {
     var coordinator: CategorizedQuotesCoordinator?
-    private(set) var data: [String] = [Categories.uncategorized.rawValue]
+    private(set) var data: [Category] = []
     private let realmService: RealmService
     
     enum ViewInput {
-        case categoryDidTap(String)
+        case categoryDidTap(Category)
         case didReturnFromChildViewController(Coordinatable)
     }
     
@@ -32,18 +32,10 @@ final class CategorizedQuotesViewModel: CategorizedQuotesViewModelProtocol {
     }
     
     func refreshData() {
-        self.realmService.getAll(model: QuoteRealmModel.self) { result in
+        self.realmService.getAll(model: CategoryRealmModel.self) { result in
             switch result {
-            case .success(let realmQuotes):
-                let quotes = realmQuotes.map { QuoteModel(realmModel: $0) }
-                quotes.forEach { quote in
-                    quote.categories.forEach { category in
-                        if (!self.data.contains(category)) {
-                            self.data.append(category)
-                        }
-                    }
-                }
-                print(self.data)
+            case .success(let realmCategories):
+                self.data = realmCategories.map { Category(realmModel: $0) }
             case .failure(let error):
                 print("🔴\(error)")
             }
