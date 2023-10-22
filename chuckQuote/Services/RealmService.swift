@@ -117,10 +117,6 @@ final class RealmService {
 
 extension Object {
     func isExisted(keyValue: String, realm: Realm) -> Bool {
-        if realm.object(ofType: Self.self, forPrimaryKey: keyValue) != nil {
-            return true
-        }
-
-        return false
+        return realm.object(ofType: Self.self, forPrimaryKey: keyValue) != nil 
     }
 }
