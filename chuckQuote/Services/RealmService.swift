@@ -8,11 +8,46 @@
 
 import Foundation
 import RealmSwift
+import Security
 
 final class RealmService {
+    private lazy var realmConfig = {
+        let keychainSearchingQuery = [
+            kSecClass as String: kSecClassKey,
+            kSecReturnData as String: true
+        ]
+        
+        var item: CFTypeRef?
+        let status = SecItemCopyMatching(keychainSearchingQuery as CFDictionary, &item)
+        
+        guard status != errSecItemNotFound else {
+            var key = Data(count: 64)
+            _ = key.withUnsafeMutableBytes { pointer in
+                SecRandomCopyBytes(kSecRandomDefault, 64, pointer.baseAddress!)
+            }
+            
+            let keychainItemQuery = [
+                kSecValueData as String: key,
+                kSecClass as String: kSecClassKey
+            ]
+            
+            let status = SecItemAdd(keychainItemQuery as CFDictionary, nil)
+            let config = Realm.Configuration(encryptionKey: key)
+            return config
+        }
+        
+        guard let key = item as? Data else {
+            let config = Realm.Configuration()
+            return config
+        }
+        
+        let config = Realm.Configuration(encryptionKey: key)
+        return config
+    }()
+    
     func getAll<T: Object> (model: T.Type, completion: @escaping (Result<[T], Error>) -> Void) {
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: realmConfig)
             
             let objectsRealm = realm.objects(model)
             let objects = Array(objectsRealm)
@@ -28,7 +63,7 @@ final class RealmService {
         completion: @escaping (Result<T?, Error>) -> Void
     ){
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: realmConfig)
             
             guard let object = realm.object(ofType: model.self, forPrimaryKey: keyValue) else {
                 completion(.success(nil))
@@ -56,7 +91,7 @@ final class RealmService {
     
     private func handle <T: Object> (object: T, action: Action, completion: @escaping (Result<Void, Error>) -> Void) {
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: realmConfig)
             
             try realm.write {
                 switch action {
@@ -82,7 +117,7 @@ final class RealmService {
 
 extension Object {
     func isExisted(keyValue: String, realm: Realm) -> Bool {
-        if let object = realm.object(ofType: Self.self, forPrimaryKey: keyValue) {
+        if realm.object(ofType: Self.self, forPrimaryKey: keyValue) != nil {
             return true
         }
 
